@@ -6,7 +6,7 @@ import { data } from "./mockData";
 import { columnDefinations } from "./ColumnDefinations";
 export default function App() {
   return (
-    <div>
+    <div style={{ maxWidth: "1200px", margin: "auto" }}>
       <h1>Corona Case Tracker</h1>
       <div
         style={{
