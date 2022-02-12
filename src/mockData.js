@@ -1,53 +1,35 @@
 export const data = [
   {
     state: "India",
-    activeCases: {
-      total: 697802,
-      dayChange: 92987,
-    },
-    cured: {
-      total: 41331158,
-      dayChange: 150407,
-    },
-    deaths: {
-      total: 507177,
-      duringDay: null,
-      reconciled: null,
-      secondaryTotal: 657,
-    },
+    totalActive: 697802,
+    dayChangeActive: 92987,
+    totalCured: 41331158,
+    dayChangeCured: 150407,
+    totalDeaths: 507177,
+    duringDayDeaths: null,
+    reconciledDeaths: null,
+    secondaryTotalDeaths: 657,
   },
   {
     state: "Abc",
-    activeCases: {
-      total: 100,
-      dayChange: 10,
-    },
-    cured: {
-      total: 99,
-      dayChange: 9,
-    },
-    deaths: {
-      total: 10,
-      duringDay: 2,
-      reconciled: 2,
-      secondaryTotal: 4,
-    },
+    totalActive: 1234,
+    dayChangeActive: 12,
+    totalCured: 34,
+    dayChangeCured: 43,
+    totalDeaths: 32,
+    duringDayDeaths: 1,
+    reconciledDeaths: 1,
+    secondaryTotalDeaths: 2,
   },
   {
     state: "Def",
-    activeCases: {
-      total: 200,
-      dayChange: 5,
-    },
-    cured: {
-      total: 20,
-      dayChange: 2,
-    },
-    deaths: {
-      total: 100,
-      duringDay: 3,
-      reconciled: 3,
-      secondaryTotal: 6,
-    },
+    totalActive: 34413,
+    dayChangeActive: 42,
+    totalCured: 43223,
+    dayChangeCured: 234,
+    totalDeaths: 342,
+    duringDayDeaths: 23,
+    reconciledDeaths: 3,
+    secondaryTotalDeaths: 26,
   },
 ];

@@ -10,12 +10,12 @@ export const columnDefinations = [
     children: [
       {
         headerName: "Total",
-        field: "activeCases.total",
+        field: "totalActive",
         minWidth: 100,
       },
       {
         headerName: "Change Since Yesterday",
-        field: "activeCases.dayChange",
+        field: "dayChangeActive",
         minWidth: 210,
       },
     ],
@@ -25,12 +25,12 @@ export const columnDefinations = [
     children: [
       {
         headerName: "Total",
-        field: "cured.total",
+        field: "totalCured",
         minWidth: 100,
       },
       {
         headerName: "Change Since Yesterday",
-        field: "cured.dayChange",
+        field: "dayChangeCured",
         minWidth: 210,
       },
     ],
@@ -40,7 +40,7 @@ export const columnDefinations = [
     children: [
       {
         headerName: "Total",
-        field: "deaths.total",
+        field: "totalDeaths",
         minWidth: 100,
       },
       {
@@ -48,18 +48,18 @@ export const columnDefinations = [
         children: [
           {
             headerName: "Death during day (a)",
-            field: "deaths.duringDay",
+            field: "duringDayDeaths",
             filter: "agNumberColumnFilter",
             minWidth: 210,
           },
           {
             headerName: "Death Reconciled (b)",
-            field: "deaths.reconciled",
+            field: "reconciledDeaths",
             minWidth: 210,
           },
           {
             headerName: "Total (a+b)",
-            field: "deaths.secondaryTotal",
+            field: "secondaryTotalDeaths",
             minWidth: 130,
           },
         ],
