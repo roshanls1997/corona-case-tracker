@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="manifest.json" />
     <title>Corona Case Tracker</title>
     <style>
       body {
@@ -13,5 +14,30 @@
   </head>
   <body>
     <div id="root"></div>
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker
+            .register("worker.js")
+            .then(
+              function (registration) {
+                console.log(
+                  "worker registration successfull",
+                  registration.scope
+                );
+              },
+              function (err) {
+                console.log("worker registration failed", err);
+              }
+            )
+            .catch((err) =>
+              console.error("error while registering sercive worker", err)
+            );
+        });
+      } else {
+        console.warn("Service worker is not supported by browser");
+      }
+    </script>
   </body>
 </html>
