@@ -1,7 +1,7 @@
 export const columnDefinations = [
   {
     headerName: "State / UT",
-    field: "state",
+    field: "state_name",
     filter: "agTextColumnFilter",
     minWidth: 150,
   },
@@ -10,12 +10,12 @@ export const columnDefinations = [
     children: [
       {
         headerName: "Total",
-        field: "totalActive",
+        field: "active",
         minWidth: 100,
       },
       {
         headerName: "Change Since Yesterday",
-        field: "dayChangeActive",
+        valueGetter: (props) => props.data.new_active - props.data.active,
         minWidth: 210,
       },
     ],
@@ -25,12 +25,12 @@ export const columnDefinations = [
     children: [
       {
         headerName: "Total",
-        field: "totalCured",
-        minWidth: 100,
+        field: "cured",
+        minWidth: 110,
       },
       {
         headerName: "Change Since Yesterday",
-        field: "dayChangeCured",
+        valueGetter: (props) => props.data.new_cured - props.data.cured,
         minWidth: 210,
       },
     ],
@@ -40,7 +40,7 @@ export const columnDefinations = [
     children: [
       {
         headerName: "Total",
-        field: "totalDeaths",
+        field: "death",
         minWidth: 100,
       },
       {
@@ -48,18 +48,18 @@ export const columnDefinations = [
         children: [
           {
             headerName: "Death during day (a)",
-            field: "duringDayDeaths",
+            valueGetter: (props) => props.data.new_death - props.data.death,
             filter: "agNumberColumnFilter",
             minWidth: 210,
           },
           {
             headerName: "Death Reconciled (b)",
-            field: "reconciledDeaths",
+            field: "death_reconsille",
             minWidth: 210,
           },
           {
             headerName: "Total (a+b)",
-            field: "secondaryTotalDeaths",
+            field: "total",
             minWidth: 130,
           },
         ],
