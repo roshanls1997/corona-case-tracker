@@ -49,7 +49,6 @@ export const columnDefinations = [
           {
             headerName: "Death during day (a)",
             valueGetter: (props) => props.data.new_death - props.data.death,
-            filter: "agNumberColumnFilter",
             minWidth: 210,
           },
           {
@@ -67,3 +66,10 @@ export const columnDefinations = [
     ],
   },
 ];
+
+export const defaultColumnDefinations = {
+  sortable: true,
+  filter: "agNumberColumnFilter",
+  resizable: true,
+  flex: 1,
+};
